@@ -1,0 +1,8 @@
+cd "D:\Personal Portfolio\backend"
+node server.js
+
+cd "D:\Personal Portfolio\frontend"
+npx -y serve -l 3000
+
+
+website link - 👉 https://ravipatil-9225.github.io

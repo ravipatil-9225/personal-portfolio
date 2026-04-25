@@ -1,0 +1,4 @@
+PORTFOLIO - RESUME LINK , PROJECT WITH HYPERLINK, ADD ANY ACHIVEMENT AND PARTICIPATION
+addling skills at dashboard
+email api key - bf33dd02-178b-4dae-ae00-3bc83d87ed0f
+email api = web3forms = https://app.web3forms.com/onboarding/create
