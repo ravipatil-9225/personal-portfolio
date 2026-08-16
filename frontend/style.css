@@ -503,6 +503,7 @@ a {
 }
 
 .timeline-content {
+  display: block;
   background: var(--glass-bg);
   border: 1px solid var(--glass-border);
   padding: 25px;
