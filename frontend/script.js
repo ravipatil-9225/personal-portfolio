@@ -6,10 +6,61 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('scroll', () => {
         // Check if we have scrolled past the hero section
-        if (window.scrollY > mainContent.offsetTop - 100) {
+        if (mainContent && window.scrollY > mainContent.offsetTop - 100) {
             navbar.classList.add('dark-nav');
         } else {
             navbar.classList.remove('dark-nav');
+        }
+    });
+
+    // Mobile Navigation Drawer Toggle
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const navMenuWrapper = document.getElementById('navMenuWrapper');
+    const navOverlay = document.getElementById('navOverlay');
+    const navLinksList = document.querySelectorAll('.nav-links a');
+
+    function toggleMobileNav() {
+        const isOpen = navMenuWrapper.classList.toggle('active');
+        hamburgerBtn.classList.toggle('active');
+        navOverlay.classList.toggle('active');
+        document.body.classList.toggle('nav-open', isOpen);
+        hamburgerBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    }
+
+    function closeMobileNav() {
+        if (navMenuWrapper.classList.contains('active')) {
+            navMenuWrapper.classList.remove('active');
+            hamburgerBtn.classList.remove('active');
+            navOverlay.classList.remove('active');
+            document.body.classList.remove('nav-open');
+            hamburgerBtn.setAttribute('aria-expanded', 'false');
+        }
+    }
+
+    if (hamburgerBtn) {
+        hamburgerBtn.addEventListener('click', toggleMobileNav);
+    }
+
+    if (navOverlay) {
+        navOverlay.addEventListener('click', closeMobileNav);
+    }
+
+    // Close mobile drawer when any link is clicked
+    navLinksList.forEach(link => {
+        link.addEventListener('click', closeMobileNav);
+    });
+
+    // Close mobile drawer on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            closeMobileNav();
+        }
+    });
+
+    // Close mobile nav when resizing to desktop
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 992) {
+            closeMobileNav();
         }
     });
 
