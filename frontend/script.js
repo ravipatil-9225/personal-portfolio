@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const commandList = [
         // Navigation
         { id: 'nav-about', category: 'Navigation', icon: 'fa-user', title: 'Go to About', desc: 'Personal background & introduction', badge: '#about', action: () => scrollToSection('#about') },
-        { id: 'nav-skills', category: 'Navigation', icon: 'fa-brain', title: 'Go to Skills', desc: 'AI, Full-Stack, and Tooling stack', badge: '#skills', action: () => scrollToSection('#skills') },
+        { id: 'nav-skills', category: 'Navigation', icon: 'fa-brain', title: 'Go to All Skills', desc: 'AI, Full-Stack, and Tooling stack', badge: '#skills', action: () => scrollToSection('#skills') },
         { id: 'nav-projects', category: 'Navigation', icon: 'fa-layer-group', title: 'Go to Selected Works', desc: 'Bento Grid of full-stack AI systems', badge: '#projects', action: () => scrollToSection('#projects') },
         { id: 'nav-exp', category: 'Navigation', icon: 'fa-briefcase', title: 'Go to Experience', desc: 'Internships and engineering history', badge: '#internships', action: () => scrollToSection('#internships') },
         { id: 'nav-contact', category: 'Navigation', icon: 'fa-paper-plane', title: 'Go to Contact', desc: 'Send a direct message or inquiry', badge: '#contact', action: () => scrollToSection('#contact') },

@@ -671,6 +671,123 @@ a {
   border-color: var(--accent-cyan);
 }
 
+/* ==========================================================================
+   All Skills Bento Grid Template (Matching Selected Works Architecture)
+   ========================================================================== */
+
+.skills-bento-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 24px;
+  perspective: 1200px;
+}
+
+.bento-skill-card {
+  grid-column: span 4;
+  display: flex;
+  flex-direction: column;
+}
+
+.bento-skill-card .bento-card-inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.bento-skill-card .bento-meta-bar {
+  margin-bottom: 16px;
+}
+
+.bento-skill-card .bento-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  line-height: 1.35;
+}
+
+.bento-skill-card .bento-title i {
+  font-size: 1.15rem;
+  flex-shrink: 0;
+}
+
+.bento-skill-card .bento-desc {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+  margin-bottom: 20px;
+}
+
+.bento-skill-card .bento-footer {
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.bento-skill-card .bento-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  width: 100%;
+}
+
+.bento-skill-card .bento-tags span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-size: 0.81rem;
+  color: #e4e4e7;
+  font-weight: 500;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  user-select: none;
+}
+
+.bento-skill-card .bento-tags span i {
+  font-size: 0.85rem;
+  color: var(--accent-cyan);
+  transition: transform 0.25s ease;
+}
+
+.bento-skill-card .bento-tags span:hover {
+  background: rgba(34, 211, 238, 0.14);
+  border-color: rgba(34, 211, 238, 0.45);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(34, 211, 238, 0.12);
+}
+
+.bento-skill-card .bento-tags span:hover i {
+  transform: scale(1.15);
+}
+
+/* Responsive Rules for Skills Bento Grid */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .skills-bento-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px;
+  }
+  .bento-skill-card {
+    grid-column: span 1 !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .skills-bento-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px;
+  }
+  .bento-skill-card {
+    grid-column: span 1 !important;
+  }
+}
+
 /* Timeline */
 .timeline {
   position: relative;
